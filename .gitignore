@@ -20,3 +20,6 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# TypeScript build cache
+*.tsbuildinfo
