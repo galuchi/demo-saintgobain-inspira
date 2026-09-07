@@ -1,12 +1,12 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100 shadow-sm">
-      <div className="flex items-center justify-between px-4 py-3">
+    <header className="sticky top-0 z-50 bg-white">
+      <div className="flex items-center justify-between px-6 py-4">
         {/* Saint-Gobain Logo — imagem real de /public */}
         <img
           src="/logo_saintgobain.png"
           alt="Saint-Gobain"
-          className="h-9 w-auto object-contain"
+          className="h-11 w-auto object-contain"
         />
 
         {/* Worker Avatar */}

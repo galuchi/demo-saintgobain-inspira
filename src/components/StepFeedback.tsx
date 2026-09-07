@@ -38,7 +38,8 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
   }
 
   return (
-    <div className="space-y-6 pt-6 pb-8">
+    <div className="space-y-6 pt-8 pb-10 px-2">
+      {/* Hero text */}
       <div className="space-y-2">
         <h1 className="text-3xl font-extrabold leading-tight">
           <span style={{ color: '#0B2265' }}>Vamos tornar sua ideia </span>
@@ -53,21 +54,25 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
       <div className="bg-[#F0F4FA] rounded-3xl p-5 space-y-4">
 
         {/* Header: "Assistente Inspira  [IA]" */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2.5">
           <span className="font-bold text-slate-800 text-base">Assistente Inspira</span>
-          <span className="bg-[#6D28D9] text-white text-xs font-bold px-2 py-0.5 rounded-md">
+          {/* Badge IA: gradiente roxo, letra em italico */}
+          <span
+            className="text-white text-xs font-bold italic px-2.5 py-1 rounded-lg"
+            style={{ background: 'linear-gradient(135deg, #7C3AED, #5B21B6)' }}
+          >
             IA
           </span>
         </div>
 
-        {/* Score — italic blue, no separate bar */}
-        <p className="text-blue-600 font-medium italic text-sm">
-          Score de aderencia: {output.score}/100
+        {/* Score — italico roxo com acento correto */}
+        <p className="font-semibold italic text-sm" style={{ color: '#7C3AED' }}>
+          Score de ader&#234;ncia: {output.score}/100
         </p>
 
         {/* Improved idea card */}
         <div className="bg-white rounded-2xl p-4 shadow-sm space-y-2">
-          <h3 className="font-bold text-slate-900 text-sm leading-snug">
+          <h3 className="font-bold text-sm leading-snug" style={{ color: '#0B2265' }}>
             {output.improved_title}
           </h3>
           <p className="text-slate-600 text-sm leading-relaxed">
@@ -84,7 +89,7 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
             <ul className="space-y-1.5">
               {output.tips.map((tip, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
-                  <span className="text-blue-500 mt-0.5 flex-shrink-0">•</span>
+                  <span className="text-blue-500 mt-0.5 flex-shrink-0">&#8226;</span>
                   {tip}
                 </li>
               ))}
@@ -92,13 +97,13 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
           </div>
         )}
 
-        {/* Regenerate button */}
+        {/* Gerar outra versao — borda azul, texto azul */}
         <button
           onClick={handleRegenerate}
           disabled={loading}
-          className="w-full flex items-center justify-center gap-2 bg-white border border-slate-200
-                     text-slate-700 hover:bg-slate-50 active:bg-slate-100 rounded-xl py-3 text-sm font-medium
-                     transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed shadow-sm"
+          className="w-full flex items-center justify-center gap-2 bg-white border-2 border-blue-500
+                     text-blue-600 hover:bg-blue-50 active:bg-blue-100 rounded-xl py-3 text-sm font-semibold
+                     transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {loading ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Gerando nova versao...</>

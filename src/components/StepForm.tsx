@@ -43,7 +43,8 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 pt-6 pb-8">
+    <form onSubmit={handleSubmit} className="space-y-6 pt-8 pb-10 px-2">
+      {/* Hero text */}
       <div className="space-y-2">
         <h1 className="text-3xl font-extrabold leading-tight">
           <span style={{ color: '#0B2265' }}>Transforme sua ideia em um </span>
@@ -54,6 +55,7 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
         </p>
       </div>
 
+      {/* Campo: Titulo */}
       <div>
         <label className="field-label">
           Titulo<span className="text-red-500">*</span>
@@ -70,12 +72,13 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
         <p className="counter">{titulo.length}/100</p>
       </div>
 
+      {/* Campo: Descricao */}
       <div>
         <label className="field-label">
           Descricao<span className="text-red-500">*</span>
         </label>
         <textarea
-          className="field-input h-36"
+          className="field-input h-40"
           placeholder="Conte sua ideia aqui..."
           maxLength={1000}
           value={descricao}
@@ -85,12 +88,13 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
         <p className="counter">{descricao.length}/1000</p>
       </div>
 
+      {/* Campo: Problema */}
       <div>
         <label className="field-label">
           Qual problema essa ideia resolve?
         </label>
         <textarea
-          className="field-input h-28"
+          className="field-input h-32"
           placeholder="Ex: Demora no processo, alto consumo de energia..."
           maxLength={500}
           value={problema}
