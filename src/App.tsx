@@ -44,7 +44,7 @@ export default function App() {
           </div>
           <h2 className="text-2xl font-bold text-sg-blue">Ideia enviada com sucesso!</h2>
           <p className="text-slate-500 text-sm leading-relaxed">
-            Sua proposta foi registrada e será analisada pela equipe de inovação da Saint-Gobain.
+            Sua proposta foi registrada e será analisada pela equipe de inovação da Saint Gobain.
             Você receberá um retorno em breve.
           </p>
           <button

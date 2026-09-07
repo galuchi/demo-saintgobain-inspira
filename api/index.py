@@ -39,7 +39,7 @@ FALLBACK_RESPONSE = IdeaOutput(
         "Minha ideia é criar um processo para reaproveitar os resíduos de gesso "
         "gerados na linha de produção, transformando-os em matéria-prima para novos "
         "produtos. Isso pode reduzir o volume de descarte, diminuir custos e contribuir "
-        "para as metas de sustentabilidade da Saint-Gobain."
+        "para as metas de sustentabilidade da Saint Gobain."
     ),
     tips=[
         "Descreva mais o ganho esperado",
@@ -47,10 +47,10 @@ FALLBACK_RESPONSE = IdeaOutput(
     ],
 )
 
-SYSTEM_PROMPT = """Você é o Assistente Inspira da Saint-Gobain, especialista sênior em 
+SYSTEM_PROMPT = """Você é o Assistente Inspira da Saint Gobain, especialista sênior em 
 Lean Manufacturing, Inovação Industrial e Sustentabilidade.
 
-Sua missão é aprimorar ideias de colaboradores das fábricas Saint-Gobain, tornando-as 
+Sua missão é aprimorar ideias de colaboradores das fábricas Saint Gobain, tornando-as 
 mais claras, impactantes e aderentes aos pilares estratégicos da empresa: 
 sustentabilidade, redução de desperdício (Zero Waste), eficiência energética e criação 
 de valor para clientes.
