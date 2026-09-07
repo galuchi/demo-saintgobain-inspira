@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { ArrowRight, RotateCcw, Loader2 } from 'lucide-react'
 import type { IdeaInput, IdeaOutput } from '../App'
 
@@ -38,7 +38,7 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
   }
 
   return (
-    <div className="space-y-6 pt-8 pb-10 px-2">
+    <div className="space-y-6 pt-4 pb-10 px-2">
       {/* Hero text */}
       <div className="space-y-2">
         <h1 className="text-3xl font-extrabold leading-tight">
