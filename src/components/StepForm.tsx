@@ -1,4 +1,4 @@
-﻿import { useState, useRef } from 'react'
+﻿import { useState } from 'react'
 import { ArrowRight, Loader2 } from 'lucide-react'
 import type { IdeaInput, IdeaOutput } from '../App'
 
@@ -23,7 +23,6 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
   const [problema, setProblema] = useState(initialValues?.problema ?? '')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const formRef = useRef<HTMLFormElement>(null)
 
   const canSubmit = titulo.trim().length > 0 && descricao.trim().length > 0
 
@@ -44,26 +43,25 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
   }
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="space-y-5 pt-6">
-      {/* Hero text */}
-      <div className="space-y-1.5">
-        <h1 className="text-2xl font-bold leading-tight" style={{ color: '#0B2265' }}>
-          Transforme sua ideia em um grande impacto
+    <form onSubmit={handleSubmit} className="space-y-6 pt-6 pb-8">
+      <div className="space-y-2">
+        <h1 className="text-3xl font-extrabold leading-tight">
+          <span style={{ color: '#0B2265' }}>Transforme sua ideia em um </span>
+          <span className="text-blue-600">grande impacto</span>
         </h1>
         <p className="text-slate-500 text-sm leading-relaxed">
-          Conte sua ideia e veja ela impactando no dia-a-dia da fábrica!
+          Conte sua ideia e veja ela impactando no dia-a-dia da fabrica!
         </p>
       </div>
 
-      {/* Campo: Titulo */}
       <div>
         <label className="field-label">
-          Título <span className="text-red-500">*</span>
+          Titulo<span className="text-red-500">*</span>
         </label>
         <input
           type="text"
           className="field-input"
-          placeholder="Ex: Nova forma de reaproveitar resíduos na fábrica"
+          placeholder="Ex: Nova forma de reaproveitar residuos na fabrica"
           maxLength={100}
           value={titulo}
           onChange={e => setTitulo(e.target.value)}
@@ -72,13 +70,12 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
         <p className="counter">{titulo.length}/100</p>
       </div>
 
-      {/* Campo: Descricao */}
       <div>
         <label className="field-label">
-          Descrição <span className="text-red-500">*</span>
+          Descricao<span className="text-red-500">*</span>
         </label>
         <textarea
-          className="field-input h-32"
+          className="field-input h-36"
           placeholder="Conte sua ideia aqui..."
           maxLength={1000}
           value={descricao}
@@ -88,13 +85,12 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
         <p className="counter">{descricao.length}/1000</p>
       </div>
 
-      {/* Campo: Problema */}
       <div>
         <label className="field-label">
           Qual problema essa ideia resolve?
         </label>
         <textarea
-          className="field-input h-24"
+          className="field-input h-28"
           placeholder="Ex: Demora no processo, alto consumo de energia..."
           maxLength={500}
           value={problema}
@@ -104,18 +100,16 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
         <p className="counter">{problema.length}/500</p>
       </div>
 
-      {/* Error */}
       {error && (
         <p className="text-red-500 text-sm bg-red-50 rounded-xl px-4 py-3">{error}</p>
       )}
 
-      {/* Actions */}
-      <div className="space-y-2 pt-1">
+      <div className="space-y-1 pt-2">
         <button type="submit" className="btn-primary" disabled={!canSubmit || loading}>
           {loading ? (
-            <><Loader2 className="w-4 h-4 animate-spin" /> Analisando com IA...</>
+            <><Loader2 className="w-5 h-5 animate-spin" /> Analisando com IA...</>
           ) : (
-            <>Continuar <ArrowRight className="w-4 h-4" /></>
+            <>Continuar <ArrowRight className="w-5 h-5" /></>
           )}
         </button>
         <button type="button" className="btn-ghost">

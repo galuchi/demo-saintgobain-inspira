@@ -35,7 +35,7 @@ export default function App() {
 
   if (step === 'success') {
     return (
-      <div className="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+      <div className="bg-white min-h-screen flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-white rounded-3xl shadow-xl p-8 text-center space-y-4">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
             <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export default function App() {
   }
 
   return (
-    <div className="bg-slate-100 min-h-screen flex flex-col">
+    <div className="bg-white min-h-screen flex flex-col">
       <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
         <Header />
         <main className="flex-1 px-4 pb-6">
