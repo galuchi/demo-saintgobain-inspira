@@ -46,7 +46,7 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
           <span className="text-blue-600">ainda melhor</span>
         </h1>
         <p className="text-slate-500 text-sm leading-relaxed">
-          Utilize nosso assistente para aprimorar sua ideia antes de submete-la.
+          Utilize nosso assistente para aprimorar sua ideia antes de submetê-la.
         </p>
       </div>
 
@@ -106,9 +106,9 @@ export default function StepFeedback({ input, output, onContinue, onBack, onRege
                      transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {loading ? (
-            <><Loader2 className="w-4 h-4 animate-spin" /> Gerando nova versao...</>
+            <><Loader2 className="w-4 h-4 animate-spin" /> Gerando nova versão...</>
           ) : (
-            <><RotateCcw className="w-4 h-4" /> Gerar outra versao</>
+            <><RotateCcw className="w-4 h-4" /> Gerar outra versão</>
           )}
         </button>
 

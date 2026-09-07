@@ -51,14 +51,14 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
           <span className="text-blue-600">grande impacto</span>
         </h1>
         <p className="text-slate-500 text-sm leading-relaxed">
-          Conte sua ideia e veja ela impactando no dia-a-dia da fabrica!
+          Conte sua ideia e veja ela impactando no dia-a-dia da fábrica!
         </p>
       </div>
 
       {/* Campo: Titulo */}
       <div>
         <label className="field-label">
-          Titulo<span className="text-red-500">*</span>
+          Título<span className="text-red-500">*</span>
         </label>
         <input
           type="text"
@@ -75,7 +75,7 @@ export default function StepForm({ onSubmit, initialValues }: Props) {
       {/* Campo: Descricao */}
       <div>
         <label className="field-label">
-          Descricao<span className="text-red-500">*</span>
+          Descrição<span className="text-red-500">*</span>
         </label>
         <textarea
           className="field-input h-40"
